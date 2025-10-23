@@ -71,16 +71,15 @@ if ($installIcons -eq 'y') {
     Write-Host "For usage instructions, visit:" -ForegroundColor Green
     Write-Host "https://github.com/oblador/react-native-vector-icons/blob/master/README.md" -ForegroundColor Yellow
 }
-
+Set-Location ..
 # -------------------------
 # Project Structure
 # ------------------------- 
+Write-Host "Creating project folder structure..." -ForegroundColor Cyan
+Copy-Item -Path "./$folderName/src" -Destination "./$appName/src" -Recurse
 Copy-Item -Path "./$folderName/tsconfig.json" -Destination "./$appName/tsconfig.json" -Force
 Copy-Item -Path "./$folderName/config.ts" -Destination "./$appName/src/config.ts" -Force
 
-Write-Host "Creating project folder structure..." -ForegroundColor Cyan
-# copy recursively the folder ./$folderName/src to ./$appName/src
-Copy-Item -Path "./$folderName/src" -Destination "./$appName/src" -Recurse
 
 # -------------------------
 # Completion Message
