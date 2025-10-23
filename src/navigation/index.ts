@@ -1,2 +1,2 @@
-export { default as TabNavigator } from "./tab-navigator";
-export { default as DrawerNavigator } from "./drawer-navigator";
+export { default as TabNavigator } from "./TabNavigator";
+export { default as DrawerNavigator } from "./DrawerNavigator";
